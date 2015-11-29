@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Julklapp";
+}
+@model SecretSanta.Models.DistributionViewModel
+
+@if (Model.PersonExists)
+{
+    <div class="col-md-8">
+        <h1>Julkl<font color="Red">app</font><sup style="font-size:20px; top:-1.6em">2015</sup></h1>
+        @if (Model.AlreadyAssigned)
+        {
+            <h2>Du har tidigare blivit tilldelad att handla julkl<font color="Red">app</font></h2>
+        }
+        else
+        {
+            <h2>Du ska handla julkl<font color="Red">app</font></h2>
+        }
+        <h2>till</h2>
+
+        <h1>@Model.Name</h1>
+
+        <h2>Budget max @Model.Budget kr</h2>
+    </div>
+    <div class="col-md-4">
+        <br />
+        <img src="@Url.Content("~/Content/DSC02367mini.jpg")" alt="IMAGES" class="img-rounded img-responsive" />
+        <h3>@Model.GroupName</h3>
+    </div>
+}
+else
+{
+    <div class="col-md-8">
+        <h1>Julkl<font color="Red">app</font></h1>
+        <h2>Du skrev in fel namn eller är inte medlem i denna julgrupp!</h2>
+        <h3>Om felet kvarstår eller du upplever att det är fel, kontakta den som gav dig adressen hit.</h3>
+
+        @using (Html.BeginForm("Index", "Home", FormMethod.Get, new { @class = "form-horizontal" }))
+        {
+            <input type="submit" value="Tillbaka till förstasidan" class="btn btn-danger btn-lg" style="margin-top:20px" />
+        }
+    </div>
+    <div class="col-md-4">
+        <img src="@Url.Content("~/Content/DSC02374mini.jpg")" alt="IMAGES" class="img-rounded img-responsive" />
+    </div>
+
+}

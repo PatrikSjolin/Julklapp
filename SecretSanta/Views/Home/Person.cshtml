@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Julklapp";
+}
+@model SecretSanta.Models.PersonViewModel
+
+<div class="col-md-8">
+    <h1>Julkl<font color="Red">app</font><sup style="font-size:20px; top:-1.6em">2015</sup></h1>
+    @using (Html.BeginForm("Distribution", "Home", FormMethod.Post, new { @class = "form-horizontal" }))
+    {
+        @Html.Label("Ditt förnamn")
+        <br />
+            @Html.TextBox("firstName")
+            <br />
+            @Html.Label("Ditt efternamn")
+            <br />
+            @Html.TextBox("lastName")
+            @Html.TextBox("groupId", Model.GroupId, new { @class = "hidden" })
+            <br />
+            <input type="submit" value="Nästa" class="btn btn-danger btn-lg" style="margin-top:20px" />
+    }
+</div>
+<div class="col-md-4">
+    <img src="@Url.Content("~/Content/DSC02356mini.jpg")" alt="IMAGES" class="img-rounded img-responsive" />
+</div>
