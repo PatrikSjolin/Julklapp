@@ -67,6 +67,10 @@ namespace SecretSanta.Controllers
                         x.Id != person.Id &&
                         //You can't give to someone has given to you
                         x.Receiver != person.Id);
+                        if(member == null)
+                        {
+                            member = members.FirstOrDefault(x => !x.HasGotPresent && x.Id != person.Id);
+                        }
                     }
                     member.HasGotPresent = true;
                     person.Receiver = member.Id;
