@@ -7,20 +7,21 @@
 @if (Model.PersonExists)
 {
     <div class="col-md-8">
-        <h1>Julkl<font color="Red">app</font><sup style="font-size:20px; top:-1.6em">2015</sup></h1>
+        <h1>Julkl<font color="Red">app</font><sup style="font-size:20px; top:-1.6em">2017</sup></h1>
+        <p>Du är varmt välkommen hem till Josefine och Patrik.</p>
         @if (Model.AlreadyAssigned)
         {
-            <h2>Du har tidigare blivit tilldelad att handla julkl<font color="Red">app</font></h2>
+            <h2>Du har tidigare blivit tilldelad att handla julkl<font color="Red">app</font> till</h2>
         }
         else
         {
-            <h2>Du ska handla julkl<font color="Red">app</font></h2>
+            <h2>Du ska handla julkl<font color="Red">app</font> till</h2>
         }
-        <h2>till</h2>
 
         <h1>@Model.Name</h1>
 
         <h2>Budget max @Model.Budget kr</h2>
+        <p>Alla har rätt att handla presenter till minstingarna Alva och mini-Sjölin</p>
     </div>
     <div class="col-md-4">
         <br />

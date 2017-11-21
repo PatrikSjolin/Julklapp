@@ -37,7 +37,10 @@ namespace SecretSanta.Controllers
             vm.GroupName = group.Name;
             var members = group.Members.ToList();
 
-            var person = members.FirstOrDefault(x => x.FirstName.ToLower() == firstName.ToLower() && x.LastName.ToLower() == lastName.ToLower());
+            firstName = firstName.Trim().ToLower();
+            lastName = lastName.Trim().ToLower();
+
+            var person = members.FirstOrDefault(x => x.FirstName.ToLower() == firstName && x.LastName.ToLower() == lastName);
 
             Member member;
 
