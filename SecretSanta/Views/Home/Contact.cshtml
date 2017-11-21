@@ -3,13 +3,13 @@
 }
 
 <div class="col-md-8">
-    <h1>Julkl<font color="Red">app</font><sup style="font-size:20px; top:-1.6em">2017</sup></h1>
+    <h1 class="hide-mobile2">Julkl<font color="Red">app</font><sup style="font-size:20px; top:-1.6em">2017</sup></h1>
     @using (Html.BeginForm("Index", "Home", FormMethod.Get, new { @class = "form-horizontal" }))
     {
         <h2>Denna sida är designad av Sealion och Säl</h2>
         <input type="submit" value="Tillbaka till förstasidan" class="btn btn-danger btn-lg" style="margin-top:20px" />
     }
 </div>
-<div class="col-md-4">
+<div class="col-md-4 hide-mobile2">
     <img src="@Url.Content("~/Content/DSC02383mini.jpg")" alt="IMAGES" class="img-rounded img-responsive" />
 </div>

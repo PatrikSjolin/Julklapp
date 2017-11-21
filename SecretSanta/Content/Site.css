@@ -1,6 +1,24 @@
 ﻿body {
-    padding-top: 50px;
+    /*padding-top: 50px;*/
     padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .hide-mobile {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 668px) {
+    .hide-mobile2 {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 668px) {
+    .show-mobile{
+        display: none;
+    }
 }
 
 /* Set padding to keep content from hitting the edges */

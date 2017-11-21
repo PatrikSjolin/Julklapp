@@ -4,7 +4,7 @@
 @model SecretSanta.Models.PersonViewModel
 
 <div class="col-md-8">
-    <h1>Julkl<font color="Red">app</font><sup style="font-size:20px; top:-1.6em">2017</sup></h1>
+    <h1 class="hide-mobile2">Julkl<font color="Red">app</font><sup style="font-size:20px; top:-1.6em">2017</sup></h1>
     <p>Fyll i ditt för- och efternamn för att se om just du är välkommen till Jul på Skärvallsgatan</p>
     @using (Html.BeginForm("Distribution", "Home", FormMethod.Post, new { @class = "form-horizontal" }))
     {
@@ -20,6 +20,6 @@
             <input type="submit" value="Nästa" class="btn btn-danger btn-lg" style="margin-top:20px" />
     }
 </div>
-<div class="col-md-4">
+<div class="col-md-4 hide-mobile">
     <img src="@Url.Content("~/Content/DSC02356mini.jpg")" alt="IMAGES" class="img-rounded img-responsive" />
 </div>
