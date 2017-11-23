@@ -74,15 +74,7 @@ namespace SecretSanta.Migrations
                     {
                         Id = Guid.NewGuid(),
                         FirstName = "Madelene",
-                        LastName = "Casselbrant",
-                        HasGotPresent = false,
-                        Receiver = null
-                    },
-                    new Models.Member
-                    {
-                        Id = Guid.NewGuid(),
-                        FirstName = "Paul",
-                        LastName = "Laverty",
+                        LastName = "Paul",
                         HasGotPresent = false,
                         Receiver = null
                     },
